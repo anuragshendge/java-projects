@@ -13,7 +13,7 @@ public class SortDriver {
 		heapSortObj.addHeap(54);
 		heapSortObj.addHeap(10);
 		heapSortObj.addHeap(31);
-		
+		heapSortObj.deleteHeap();
 	}
 	
 }
