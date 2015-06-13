@@ -4,7 +4,7 @@ import java.util.*;
 
 import anurag.utilities.org.PrintArray;
 
-public class HeapSort {
+public class Heap {
 
 	public static List<Integer> heapList = new ArrayList<Integer>();
 
@@ -76,14 +76,17 @@ public class HeapSort {
 		}
 
 	}
-
-	public void deleteHeap() {
+	
+	public void deleteHeap() throws NoSuchElementException {
 		
 		int hold = heapList.get(0);
-		heapList.set(0,heapList.remove(heapList.size()-1));
+		if (heapList.size() == 0) {
+			throw new NoSuchElementException();
+		}
+		heapList.set(0, heapList.remove(heapList.size() - 1));
 		siftDown();
 		System.out.println("After deletion");
 		System.out.println(heapList.toString());
-		
+
 	}
 }
