@@ -27,17 +27,31 @@ public class Q1 {
 		return true;
 	}
 
-	
+	private static boolean isUnique(String str) {
+
+		if (str.length() > 128)
+			return false;
+
+		boolean[] trackArray = new boolean[128];
+
+		for (int i = 0; i < str.length(); i++) {
+
+			int val = str.charAt(i);
+			if (trackArray[val])
+				return false;
+			trackArray[val] = true;
+		}
+		return true;
+	}
 
 	public static void main(String[] args) {
 
-		String str = "anurag";
+		String str = "122321323";
 
-	if (checkDuplicate(str))
+		if (isUnique(str))
 			System.out.println("Unique");
 		else
 			System.out.println("Duplicate present");
-
 
 	}
 
