@@ -13,6 +13,7 @@ public class Q1 {
 	 * 
 	 * @param = str
 	 */
+	@SuppressWarnings("unused")
 	private static boolean checkDuplicate(String str) {
 
 		for (int i = 0; i < str.length(); i++) {
