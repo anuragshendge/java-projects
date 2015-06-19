@@ -2,11 +2,11 @@ package anurag.StackandQueues.org;
 
 public class StackImpl<T> implements StackImplInterface<T>{
 	
-	
+	static int MAX_CAPACITY = 1000;
 	int top = -1,capacity;
 	T arr[];
 	public StackImpl(){
-		this(1000);
+		this(MAX_CAPACITY);
 	}
 	public StackImpl(int cap){
 		capacity = cap;
