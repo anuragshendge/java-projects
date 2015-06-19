@@ -2,7 +2,7 @@ package anurag.arraysAndStrings.org;
 
 public class Q5 {
 /*
- * beware of checking the size of i and j pointers */
+ * beware of checkin */
 	private static String compressString(String str){
 		
 		int sizeComStr = sizeOfCompressedStr(str);
