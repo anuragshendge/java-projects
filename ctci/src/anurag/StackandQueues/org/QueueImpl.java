@@ -63,7 +63,7 @@ public class QueueImpl<T>{
 	
 	public T peek(){
 		if(isEmpty()){
-			System.out.println("EMpty");
+			System.out.println("Empty");
 		return null;
 		}
 		return queue[front];

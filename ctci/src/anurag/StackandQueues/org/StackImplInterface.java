@@ -7,4 +7,5 @@ public interface StackImplInterface<T> {
 	boolean isEmpty();
 	T peek();
 	
+	
 }
