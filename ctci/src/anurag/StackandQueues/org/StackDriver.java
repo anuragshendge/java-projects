@@ -13,7 +13,7 @@ public class StackDriver {
 		t.push(8888,3);
 		System.out.println("Pop output is " + t.pop(1));
 		System.out.println("Peek output is " + t.isEmpty(1));
-
+	
 	}
 
 }
