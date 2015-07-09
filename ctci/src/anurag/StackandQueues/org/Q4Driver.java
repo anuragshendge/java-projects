@@ -16,8 +16,7 @@ public class Q4Driver {
 		
 		for(int i=0; i<3; i++){
 			tower[i] = new TowerOfHanoi(i);
-		}
-		
+		}		
 		
 		int numberOfDisk = 12;
 		for(int i=numberOfDisk;i>0;i--)
