@@ -8,7 +8,7 @@ public class BuildMaxHeap {
 
 		this.data = data;
 		size = data.length;
-		
+
 		for (int i = (size / 2 - 1); i >= 0; i--) {
 			heapify(i);
 
@@ -37,13 +37,11 @@ public class BuildMaxHeap {
 
 		if (left < size && data[left] > data[largest])
 			largest = left;
-		
 
 		if (right < size && data[right] > data[largest])
 			largest = right;
 
 		if (largest != i) {
-
 			int swap = data[largest];
 			data[largest] = data[i];
 			data[i] = swap;
