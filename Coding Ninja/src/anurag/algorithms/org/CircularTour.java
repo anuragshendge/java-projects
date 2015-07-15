@@ -1,13 +1,16 @@
 package anurag.algorithms.org;
 
 public class CircularTour {
-
+/*NOt really sure if I agree with the solution
+ * 
+ * 
+ * */
 		
 	public static int printTour(int[] petrol, int[] distance){
 		
 		int start =0;
 		int end = 1;
-		int currentPetrol = distance[start] - distance[start];
+		int currentPetrol = petrol[start] - distance[start];
 		int len = petrol.length;
 		while(currentPetrol < 0 || start != end){
 			
@@ -29,9 +32,8 @@ public class CircularTour {
 	
 	public static void main(String[] args){
 		
-		int[] petrol = {6,3,7};
-		int[] distance = {4,6,3};
-		
+		int[] petrol = {4,6,7,4};
+		int[] distance = {6,5,3,5};
 		System.out.println("Start the tour from index: "+printTour(petrol, distance));
 	
 	}
