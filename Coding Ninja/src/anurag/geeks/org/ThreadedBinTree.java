@@ -61,6 +61,20 @@ public class ThreadedBinTree {
 		return 1+sizeOfTree(root.left) + sizeOfTree(root.right);
 	
 	}
+	
+	public int maxDepth(NodeTree root){
+		
+		if(root==null){
+			return 0;
+		}
+		int lDepth = maxDepth(root.left);
+		int rDepth = maxDepth(root.right);
+
+		if(lDepth>= rDepth)
+			return lDepth+1;
+		else
+			return rDepth+1;
+	}
 	public static void main(String[] args){
 		NodeTree root = new NodeTree(6);
 		root.left = new NodeTree(3);
@@ -74,8 +88,8 @@ public class ThreadedBinTree {
 		
 		ThreadedBinTree obj = new ThreadedBinTree();
 		//obj.makeThreaded(root);
-		System.out.println(obj.sizeOfTree(root));
-		
+		System.out.println("Size of the tree="+obj.sizeOfTree(root));
+		System.out.println("Depth/height of the tree="+obj.maxDepth(root));
 		//obj.printInorder(root);
 		
 		
