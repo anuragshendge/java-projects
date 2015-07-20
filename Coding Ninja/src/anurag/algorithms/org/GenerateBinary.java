@@ -33,7 +33,7 @@ public class GenerateBinary {
 		
 		GenerateBinary o = new GenerateBinary();
 		
-		o.generate(1000);
+		o.generate(100000);
 
 	}
 
