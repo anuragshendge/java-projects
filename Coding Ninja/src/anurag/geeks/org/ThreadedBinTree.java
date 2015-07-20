@@ -55,7 +55,12 @@ public class ThreadedBinTree {
 			
 		
 	}
+	public int sizeOfTree(NodeTree root){
+		if(root == null)
+			return 0;
+		return 1+sizeOfTree(root.left) + sizeOfTree(root.right);
 	
+	}
 	public static void main(String[] args){
 		NodeTree root = new NodeTree(6);
 		root.left = new NodeTree(3);
@@ -68,12 +73,10 @@ public class ThreadedBinTree {
 		root.right.right.right = new NodeTree(13);
 		
 		ThreadedBinTree obj = new ThreadedBinTree();
-		obj.makeThreaded(root);
+		//obj.makeThreaded(root);
+		System.out.println(obj.sizeOfTree(root));
 		
-		obj.printInorder(root);
-		
-		
-		
+		//obj.printInorder(root);
 		
 		
 	}
