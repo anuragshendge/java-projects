@@ -1,11 +1,11 @@
 package anurag.algorithms.org;
 
 public class Node {
-		int value;
-		Node small;
-		Node large;
-		public Node(int value){
+		public char value;
+		public Node left;
+		public Node right;
+		public Node(char value){
 			this.value = value;
-			small = large = null;
+			left = right = null;
 		}
 }

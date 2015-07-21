@@ -69,7 +69,7 @@ public class ThreadedBinTree {
 		}
 		int lDepth = maxDepth(root.left);
 		int rDepth = maxDepth(root.right);
-
+		
 		if(lDepth>= rDepth)
 			return lDepth+1;
 		else
@@ -90,6 +90,7 @@ public class ThreadedBinTree {
 		//obj.makeThreaded(root);
 		System.out.println("Size of the tree="+obj.sizeOfTree(root));
 		System.out.println("Depth/height of the tree="+obj.maxDepth(root));
+		System.out.println("Delete the Tree by making the pointer NULL in a post order manner");
 		//obj.printInorder(root);
 		
 		

@@ -8,8 +8,8 @@ public class TreeToList {
 	 * 											
 	 * */
 	public static void join(Node a, Node b){
-		a.large = b;
-		b.small =a;
+		a.right = b;
+		b.left =a;
 	}
 	public static Node append(Node a, Node b){
 		
@@ -18,8 +18,8 @@ public class TreeToList {
 		if(b == null)
 			return a;
 
-		Node aLast = a.small;
-		Node bLast = b.small;
+		Node aLast = a.left;
+		Node bLast = b.left;
 		join(aLast,b);
 		join(bLast,a);
 		return a;	
@@ -30,11 +30,11 @@ public class TreeToList {
 		if(root == null)
 			return null;
 	
-		Node aList = treeToList(root.small);
-		Node bList = treeToList(root.large);
+		Node aList = treeToList(root.left);
+		Node bList = treeToList(root.right);
 		
-		root.small = root;
-		root.large = root;
+		root.left = root;
+		root.right = root;
 		
 		aList = append(aList,root);
 		aList = append(aList, bList);
@@ -45,15 +45,15 @@ public class TreeToList {
 	// Tree creation. Initial root required - JAVA no reference pointer that is why!
 	public static void createTree(Node root, int newValue) {
 		if (root.value >= newValue) {
-			if (root.small != null)
-				createTree(root.small, newValue);
+			if (root.left != null)
+				createTree(root.left, newValue);
 			else
-			root.small = new Node(newValue);
+			root.left = new Node(newValue);
 		} else {
-			if (root.large != null)
-				createTree(root.large, newValue);
+			if (root.right != null)
+				createTree(root.right, newValue);
 			else
-			root.large = new Node(newValue);
+			root.right = new Node(newValue);
 		}
 	}
 
@@ -63,9 +63,9 @@ public class TreeToList {
 		if (root == null)
 			return;
 		System.out.print("");
-		print(root.small);
+		print(root.left);
 		System.out.print(Integer.toString(root.value)+" ");
-		print(root.large);
+		print(root.right);
 	//	System.out.println();
 	}
 //List travesal 
@@ -73,7 +73,7 @@ public class TreeToList {
 		Node current = head;
 		do{
 			System.out.print("["+current.value+"] ");
-			current = current.large;
+			current = current.right;
 		}while(current!=head);
 		
 	}
