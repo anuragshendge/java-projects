@@ -34,8 +34,10 @@ public class Q1 {
 		head.next.next.next = new LNode(4);
 		head.next.next.next.next = new LNode(7);
 		head.next.next.next.next.next = new LNode(8);
-
+		
 		obj.removeDuplicactes(head);
+		
+		
 
 	}
 }
