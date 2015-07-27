@@ -17,6 +17,8 @@ public class Q6 {
 			
 		}
 		
+		if(slow == null || fast.next == null)
+			return null;
 		slow = head;
 		
 		while(slow!=fast){
@@ -29,7 +31,6 @@ public class Q6 {
 	}
 	
 	public static void main(String[] args ){
-		
 		Q6 obj = new Q6();
 		LNode head =  new LNode(1);
 		head.next = new LNode(2);
