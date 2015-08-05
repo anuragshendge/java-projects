@@ -8,4 +8,4 @@ A collection of various hobby projects in Java.
 *Social media-like app based on REST URIs and RESTFUL concepts. (JAX-RX) JERSEY used for implementing REST API*
 
 **3. ctci**
-**practise solutions for Cracking the Coding Interview problems**
+*practise solutions for Cracking the Coding Interview problems*
