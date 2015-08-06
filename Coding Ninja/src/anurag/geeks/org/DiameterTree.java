@@ -3,7 +3,6 @@ package anurag.geeks.org;
 public class DiameterTree {
 
 	public int[] diameter(Node root) {
-
 		int ht_dim[] = { 0, 0 };
 
 		if (root != null) {
