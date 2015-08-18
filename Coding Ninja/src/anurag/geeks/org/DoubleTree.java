@@ -24,16 +24,21 @@ public class DoubleTree {
 		if(root == null)
 			return;
 		printInorder(root.left);
-		System.out.println(root.value+" ");
+		System.out.print(root.value+" ");
 		printInorder(root.right);
 	}
 	
 	public static void main(String[] args) {
 		
 		NodeTree root = new NodeTree(2);
-		root.left = new NodeTree(2);
+		root.left = new NodeTree(1);
 		root.right = new NodeTree(3);
-		
+		DoubleTree obj = new DoubleTree();
+		System.out.println("Before");
+		obj.printInorder(root);
+		System.out.println("\nAfter");
+		obj.doubleTree(root);
+		obj.printInorder(root);
 		
 	}
 }
