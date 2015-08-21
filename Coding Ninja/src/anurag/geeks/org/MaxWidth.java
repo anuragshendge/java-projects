@@ -53,8 +53,7 @@ public class MaxWidth {
 	public static void main(String[] args) {
 		NodeTree root = new NodeTree(1);
 		root.left = new NodeTree(2);
-		root.right = new NodeTree(3);
-		
+		root.right = new NodeTree(3);		
 		MaxWidth obj = new MaxWidth();
 		System.out.println(obj.getMaxWidth(root));
 		
